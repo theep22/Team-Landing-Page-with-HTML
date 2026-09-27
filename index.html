@@ -4,106 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meet Our Team</title>
-    <style>
-        :root {
-            --bg-main: #0a1128;
-            --bg-secondary: #16213e;
-            --bg-tertiary: #1e2a4a;
-            --text-primary: #ffffff;
-            --text-secondary: #b8c1d9;
-            --accent: #ff8c42;
-            --bar-color: #ff8c42;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-primary);
-            /* Memastikan halaman utama hanya 1 layar */
-            height: 100vh; 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        p.desc {
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .team-container {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .card {
-            background-color: var(--bg-secondary);
-            padding: 2.5rem;
-            border-radius: 8px;
-            border: 1px solid #2a2a2a;
-            width: 300px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent);
-        }
-
-        .card h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        .card .role {
-            color: var(--accent);
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: bold;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" media="all">
 </head>
-<body>
+<body class="bg-[#0a1128] text-white">
 
-    <h1>Meet Our Team</h1>
-    <p class="desc">
-        Kami adalah tim pengembang web yang berfokus pada perpaduan antarmuka pengguna yang indah dan sistem infrastruktur yang tangguh. Pilih salah satu profil di bawah untuk melihat detail kami.
-    </p>
+    <nav class="navbar navbar-dark bg-[#0a1128] border-bottom border-[#1e2a4a] fixed-top px-3 px-md-4 py-3" style="background-color: rgba(10, 17, 40, 0.95) !important;">
+        <div class="container-fluid navbar-flex">
+            <a href="index.html" class="nav-brand fw-bold fs-5 text-[#ff8c42] text-decoration-none">KEEP Team</a>
+            <ul class="nav-links-flex flex-grow-1">
+                <li><a href="index.html" class="active text-decoration-none text-[#b8c1d9] px-3 py-2 rounded small">Team</a></li>
+                <li><a href="khelsea.html" class="text-decoration-none text-[#b8c1d9] px-3 py-2 rounded small">Khelsea</a></li>
+                <li><a href="eep.html" class="text-decoration-none text-[#b8c1d9] px-3 py-2 rounded small">Eep</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="team-container">
-        <!-- Card Anggota 1 -->
-        <a href="khelsea.html" class="card">
-            <h2>Khelsea Mourinho Sihotang</h2>
-            <p class="role">Backend & DevOps</p>
-        </a>
-
-        <!-- Card Anggota 2 -->
-        <a href="eep.html" class="card">
-            <h2>Eep Fathurohman</h2>
-            <p class="role">UI/UX & Frontend</p>
-        </a>
+    <div class="hero pt-5 pb-3 px-3 text-center" style="padding-top: 100px;">
+        <h1 class="display-4 fw-bold mb-3">Meet Our Team</h1>
+        <p class="desc text-[#b8c1d9] mx-auto" style="max-width: 600px;">Kami adalah tim pengembang web yang berfokus pada perpaduan antarmuka pengguna yang indah dan sistem infrastruktur yang tangguh. Pilih salah satu profil di bawah untuk melihat detail kami.</p>
     </div>
 
+    <div class="container px-3 pb-5" style="padding-top: 0;">
+        <div class="team-grid">
+            <a href="khelsea.html" class="card card-flex h-100 text-decoration-none text-white d-block border-0" style="background-color: #16213e; border: 1px solid #2a2a2a !important;">
+                <div class="card-body card-flex p-4">
+                    <h2 class="h5 fw-bold mb-2">Khelsea Mourinho Sihotang</h2>
+                    <p class="role text-[#ff8c42] text-uppercase small fw-bold mb-3" style="letter-spacing: 1px;">Backend & DevOps</p>
+                    <button type="button" class="btn mt-auto px-4 py-2 fw-bold small" style="background-color: #ff8c42; color: #0a1128; border: none;">Lihat Profil</button>
+                </div>
+            </a>
+
+            <a href="eep.html" class="card card-flex h-100 text-decoration-none text-white d-block border-0" style="background-color: #16213e; border: 1px solid #2a2a2a !important;">
+                <div class="card-body card-flex p-4">
+                    <h2 class="h5 fw-bold mb-2">Eep Fathurohman</h2>
+                    <p class="role text-[#ff8c42] text-uppercase small fw-bold mb-3" style="letter-spacing: 1px;">UI/UX & Frontend</p>
+                    <button type="button" class="btn mt-auto px-4 py-2 fw-bold small" style="background-color: #ff8c42; color: #0a1128; border: none;">Lihat Profil</button>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
